@@ -1,0 +1,43 @@
+@import 'typography.scss';
+
+$pink: #FF0DFF;
+$puple: #BA68C8;
+$red: #ff0000;
+$grey: #dfdfdf;
+
+$text-color:$red;
+$site-background:$pink;
+
+.navbar .dropdown-menu li {
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+.site-footer {
+  margin-top: 30px;
+  background-color: $pink;
+}
+
+img {
+  max-width: 100%; 
+  height: auto;
+  /* så att bilden anpassas responsivt*/
+}
+
+body.category {
+  background-color: #f00;
+}
+
+.popular.posts {
+	.popular-post{
+		border: 1px solid $grey; /* Blir en ruta runt*/
+	}
+}
+
+.sidebar {
+	background-color: $site-background;
+	li{
+		color: $text-color;
+	}
+}
+

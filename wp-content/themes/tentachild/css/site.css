@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.navbar .dropdown-menu li {
+  width: 100%;
+  margin-left: 0 !important; }
+
+.site-footer {
+  margin-top: 30px;
+  background-color: #FF0DFF; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  /* så att bilden anpassas responsivt*/ }
+
+body.category {
+  background-color: #f00; }
+
+.popular.posts .popular-post {
+  border: 1px solid #dfdfdf;
+  /* Blir en ruta runt*/ }
+
+.sidebar li {
+  background-color: #FF0DFF; }
