@@ -1,21 +1,22 @@
-@import 'typography.scss';
+@import 'typography';
 
-$pink: #FF0DFF;
+$green: #92FFCE;
 $puple: #BA68C8;
 $red: #ff0000;
 $grey: #dfdfdf;
+$black: #000;
 
-$text-color:$red;
-$site-background:$pink;
+$text-color: $black;
+$site-background: $green;
 
 .navbar .dropdown-menu li {
   width: 100%;
-  margin-left: 0 !important;
+  margin-left: 0 
 }
 
 .site-footer {
   margin-top: 30px;
-  background-color: $pink;
+  background-color: $green;
 }
 
 img {
@@ -24,20 +25,38 @@ img {
   /* så att bilden anpassas responsivt*/
 }
 
-body.category {
-  background-color: #f00;
-}
-
 .popular.posts {
 	.popular-post{
 		border: 1px solid $grey; /* Blir en ruta runt*/
 	}
 }
 
-.sidebar {
-	background-color: $site-background;
-	li{
-		color: $text-color;
-	}
+.the-title{
+  text-align: justify;
 }
 
+.sidebar{
+  padding: 0.5em 1em;
+  background-color: $site-background;
+
+  .widget {
+    &:last-child {
+      border-bottom: 0;
+    }
+    h3 {
+      font-size: 2em;
+    }
+    border-bottom: 2px solid $grey;
+    margin: 1em 0;
+    padding-bottom: 1em;
+    }
+    li{
+      color: $text-color;
+    }
+}
+
+.site-footer {
+  min-height: 40px;
+  padding-topp: 10px;
+  margin-top: 20px;
+}

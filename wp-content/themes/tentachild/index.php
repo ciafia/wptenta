@@ -1,4 +1,3 @@
-
 <?php
 get_header();
 ?>
@@ -8,42 +7,44 @@ get_header();
     <div class="col-md-8">
 
     <?php
-        if (have_posts()) {
-            while (have_posts()) {
-                the_post();
-                ?>
-                    <article class="post">
-                        <header>
-                            <h1 class="the_title"><?php the_title(); ?></h1>
+      if (have_posts()) {
+        while (have_posts()) {
+          the_post();
+          ?>
 
-                            <?php
-                              // check if the post or page has a Featured Image assigned to it.
-                            if ( has_post_thumbnail() ) {
-                                the_post_thumbnail();
-                              }
-                            ?>
+            <article class="post">
+              <header>
+                <h1 class="the_title"><?php the_title(); ?></h1>
 
-                        </header>
-                        <main>
-                            
-                        </main>
-                    </article>
                 <?php
-            }
+                  // check if the post or page has a Featured Image assigned to it.
+                if ( has_post_thumbnail() ) {
+                    the_post_thumbnail();
+                  }
+                ?>
+              </header>
 
-        } else {
+                <main class="the-content"> <!-- /textinnehåll --> 
+                  <?php the_excerpt(); ?>        
+                </main>
 
-        }  _e( 'Sorry, no posts matched your criteria.', 'tentachild' );
-    ?>
-        
-  
-    
+            </article>
+
+<?php
+}
+
+  } else {
+    _e( 'Sorry, no posts matched your criteria.', 'tentachild' );
+  }  
+?>
+ 
     </div>
-   <div class="col-md-4">
+    
+    <div class="col-md-4">
 
-    <?php
-        get_sidebar();
-    ?>
+      <?php
+          get_sidebar();
+      ?>
 
     </div><!-- /col-md-4 -->
   </div><!-- /row -->

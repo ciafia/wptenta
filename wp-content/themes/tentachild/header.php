@@ -21,34 +21,27 @@
 
     <div class="container">
 
-
-
       <div class="masthead">
-        <h3 class="text-muted">WPtenta</h3>
+        <h3 class="text-muted"><?php bloginfo('name'); ?></h3>
 
-        <nav class="navbar navbar-light bg-faded rounded mb-3">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-toggleable-md" id="navbarCollapse">
-            <ul class="nav navbar-nav text-md-center justify-content-md-between">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blogg</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Övrigt</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Kontakt</a>
-              </li>                       
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
+          <nav class="navbar navbar-light bg-faded rounded mb-3 navbar-toggleable-md">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <?php
+              wp_nav_menu( array(
+                'theme_location'  => 'header-menu',
+                'container'     => 'div',
+                'container_class' => 'collapse navbar-collapse',
+                'container_id'      => 'navbarCollapse',
+                'menu_class'    => 'nav navbar-nav',
+                'fallback_cb'   => '__return_false',
+                'items_wrap'    => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth'       => 2,
+                'walker'      => new bootstrap_4_walker_nav_menu()
+              ) );
+            ?>
+          </nav>
   </div>  
 
 </div> <!-- /container -->
