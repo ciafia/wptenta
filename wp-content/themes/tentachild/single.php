@@ -12,6 +12,10 @@ get_header();
         the_post();
         ?>
           <h1><?php the_title(); ?></h1>
+          <h4 class="the-meta">
+            <span class="the-date"><?php the_date(); ?></span>
+            <span class="the-author"><?php the_author(); ?></span>
+          </h4> 
           <?php the_content(); ?>
         <?php
       endwhile;

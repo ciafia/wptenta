@@ -10,31 +10,32 @@ get_header();
       if (have_posts()) {
         while (have_posts()) {
           the_post();
+    ?>
+
+      <article class="post">
+        <header>
+          <h1 class="the_title"><?php the_title(); ?></h1>
+          
+
+          <?php
+            // check if the post or page has a Featured Image assigned to it.
+          if ( has_post_thumbnail() ) {
+              the_post_thumbnail();
+            }
           ?>
+        </header>
 
-            <article class="post">
-              <header>
-                <h1 class="the_title"><?php the_title(); ?></h1>
+          <main class="the-content"> <!-- /textinnehåll --> 
+            <?php the_content(); ?>        
+          </main>
 
-                <?php
-                  // check if the post or page has a Featured Image assigned to it.
-                if ( has_post_thumbnail() ) {
-                    the_post_thumbnail();
-                  }
-                ?>
-              </header>
-
-                <main class="the-content"> <!-- /textinnehåll --> 
-                  <?php the_content(); ?>        
-                </main>
-
-            </article>
+      </article>
 
 <?php
 }
 
   } else {
-    _e( 'Sorry, could not find that page.', 'tentachild' );
+    _e( 'Sorry, could not find you!', 'tentachild' );
   }  
 ?>
  

@@ -1,22 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700');
+
 @import 'typography';
 
 $green: #92FFCE;
 $puple: #BA68C8;
-$red: #ff0000;
 $grey: #dfdfdf;
 $black: #000;
 
 $text-color: $black;
 $site-background: $green;
 
-.navbar .dropdown-menu li {
-  width: 100%;
-  margin-left: 0 
+h1 {
+  font-family: $font;
 }
 
-.site-footer {
-  margin-top: 30px;
-  background-color: $green;
+.container {
+  padding: 0;
+}
+
+.navbar {
+  font-family: $font;
+  font-size: 35px;
+  background-color: $grey;
+    .navbar-brand {
+      font-size: 40px;
+      color: $green;
+      text-shadow:            
+               0 4px 0 #b9b9b9,
+               0 5px 0 #000,
+               0 6px 1px rgba(0,0,0,.5),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+    }
+    a {
+      color: $black;
+      &:hover {
+        color: darken($puple, 15%);
+      } 
+    }
+    .navbar-toggler{
+      background-color: $green;
+    }  
 }
 
 img {
@@ -31,32 +60,75 @@ img {
 	}
 }
 
-.the-title{
+.col-md-8 p {
   text-align: justify;
 }
 
-.sidebar{
-  padding: 0.5em 1em;
-  background-color: $site-background;
+.btn-primary {
+  background-color: $puple;
+  border-color: $black;
+  border-width: 2px;
+    &:hover {
+    background-color: $green;
+    border-color: $black;
+    border-width: 3px;
+  }
+}
 
+.btn-primary:hover {
+  background-color: $green;
+  border-color: $black;
+  border-width: 3px;
+}
+
+.col-md-4{
+  padding: 0 0;
+}
+
+.sidebar{
+  padding: 0.1em 1em;
+  margin: 1em;
+  background-color: $site-background;
+  .list-unstyled {
+    margin-bottom: 0;
+  }
   .widget {
+    input#s{
+        width: 100%;
+    }
     &:last-child {
       border-bottom: 0;
     }
     h3 {
       font-size: 2em;
+      font-family: $font;
     }
     border-bottom: 2px solid $grey;
     margin: 1em 0;
     padding-bottom: 1em;
     }
-    li{
-      color: $text-color;
+    a {
+      color: $black;
+      &:hover{
+        color: darken($grey, 50%);
+      }
     }
+  }
+
+.blog,
+.archive {
+    article {
+  border-bottom: 1px solid $grey;
+  margin: 2em;
+  padding-bottom: 1em;
+  }
 }
 
-.site-footer {
-  min-height: 40px;
-  padding-topp: 10px;
-  margin-top: 20px;
+.footer {
+  .container{
+    background-color: $green;                                        
+    padding-top: 1em;
+  }
 }
+
+

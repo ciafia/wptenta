@@ -1,15 +1,29 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,500,700");
+body {
+  font-family: 'Ubuntu', sans-serif; }
+
 h1 {
   font-family: "Berkshire Swash", cursive; }
 
-.navbar .dropdown-menu li {
-  width: 100%;
-  margin-left: 0; }
+.container {
+  padding: 0; }
 
-.site-footer {
-  margin-top: 30px;
-  background-color: #92FFCE; }
+.navbar {
+  font-family: "Berkshire Swash", cursive;
+  font-size: 35px;
+  background-color: #dfdfdf; }
+  .navbar .navbar-brand {
+    font-size: 40px;
+    color: #92FFCE;
+    text-shadow: 0 4px 0 #b9b9b9, 0 5px 0 #000, 0 6px 1px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15); }
+  .navbar a {
+    color: #000; }
+    .navbar a:hover {
+      color: #973da7; }
+  .navbar .navbar-toggler {
+    background-color: #92FFCE; }
 
 img {
   max-width: 100%;
@@ -20,24 +34,54 @@ img {
   border: 1px solid #dfdfdf;
   /* Blir en ruta runt*/ }
 
-.the-title {
+.col-md-8 p {
   text-align: justify; }
 
+.btn-primary {
+  background-color: #BA68C8;
+  border-color: #000;
+  border-width: 2px; }
+  .btn-primary:hover {
+    background-color: #92FFCE;
+    border-color: #000;
+    border-width: 3px; }
+
+.btn-primary:hover {
+  background-color: #92FFCE;
+  border-color: #000;
+  border-width: 3px; }
+
+.col-md-4 {
+  padding: 0 0; }
+
 .sidebar {
-  padding: 0.5em 1em;
+  padding: 0.1em 1em;
+  margin: 1em;
   background-color: #92FFCE; }
+  .sidebar .list-unstyled {
+    margin-bottom: 0; }
   .sidebar .widget {
     border-bottom: 2px solid #dfdfdf;
     margin: 1em 0;
     padding-bottom: 1em; }
+    .sidebar .widget input#s {
+      width: 100%; }
     .sidebar .widget:last-child {
       border-bottom: 0; }
     .sidebar .widget h3 {
-      font-size: 2em; }
-  .sidebar li {
+      font-size: 2em;
+      font-family: "Berkshire Swash", cursive; }
+  .sidebar a {
     color: #000; }
+    .sidebar a:hover {
+      color: #606060; }
 
-.site-footer {
-  min-height: 40px;
-  padding-topp: 10px;
-  margin-top: 20px; }
+.blog article,
+.archive article {
+  border-bottom: 1px solid #dfdfdf;
+  margin: 2em;
+  padding-bottom: 1em; }
+
+.footer .container {
+  background-color: #92FFCE;
+  padding-top: 1em; }
